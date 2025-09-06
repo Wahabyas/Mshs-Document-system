@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSSH - College of Social Sciences and Humanities</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles */
+    .nav-link {
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #FFC72C; /* bright yellow accent */
+    }
+    .underline-yellow {
+      border-bottom: 3px solid #FFC72C;
+    }
+    .underline-white {
+      border-bottom: 3px solid #fff;
+    }
+    .btn-explore {
+      background-color: #FFC72C;
+      color: #1a1a1a;
+      font-weight: 600;
+      padding: 0.5rem 1.25rem;
+      border-radius: 0.375rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      user-select: none;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-explore:hover {
+      background-color: #dbb52a;
+      color: #121212;
+    }
+    /* Fade gradient overlay for text visibility */
+    .hero-overlay {
+      background: linear-gradient(to right, rgba(15, 15, 15, 0.85) 0%, rgba(15, 15, 15, 0.3) 40%, rgba(15, 15, 15, 0) 100%);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    li{
+      padding: 2px;
+    }
+    /* Responsive text sizes */
+    @media (min-width: 768px) {
+      .welcome-text {
+        font-size: 3.5rem;
+      }
+      .welcome-highlight {
+        font-size: 4.5rem;
+      }
+    }
+    @media (max-width: 767px) {
+      .welcome-text {
+        font-size: 2rem;
+      }
+      .welcome-highlight {
+        font-size: 2.75rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans select-none">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 left-0 right-0 bg-black bg-opacity-95 z-50 flex justify-between items-center px-6 md:px-12">
+    <!-- Logo and Text -->
+    <div class="flex items-center space-x-3">
+      <div class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-yellow-500">
+        <!-- Placeholder for logo icon -->
+        <img src="Images/Capture-removebg-preview.png" alt="Circle emblem logo with candle symbol in black and yellow for College of Social Sciences and Humanities" 
+        class="object-contain" 
+        onerror="this.style.display='none'" />
+      </div>
+      <div class="">
+        <span class="text-yellow-400 font-bold text-xl tracking-wide">CSSH</span>
+        <p class="text-yellow-400 text-xs font-light leading-tight ml-0.5 tracking-wide">
+          College of Social<br/>Sciences and Humanities
+        </p>
+      </div>
+    </div>
+  <div class="spacer flex flex-row items-center space-x-2">
+  <!-- Eto yung hamburger na icon which is hidden by default pag hindi small--> 
+     <button id="burger" class="sm:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none" aria-label="Open menu">
+    <span class="block w-6 h-0.5 bg-yellow-400 mb-1"></span>
+    <span class="block w-6 h-0.5 bg-yellow-400 mb-1"></span>
+    <span class="block w-6 h-0.5 bg-yellow-400"></span>
+  </button>
+    <!-- Menu -->
+  <ul id="nav-menu" class="hidden sm:flex items-center justify-center  pt-5 pb-4 text-white text-sm font-semibold tracking-wide bg-black sm:bg-transparent absolute sm:static top-16 left-0 w-full sm:w-auto sm:space-x-8 flex-col sm:flex-row ">
+    <li><a href="Indexs.html" class="nav-link hover:text-yellow-400 transition ">HOME</a></li>
+    <li><a href="About.html" class="nav-link hover:text-yellow-400 transition">ABOUT</a></li>
+    <li><a href="Programs.html" class="nav-link hover:text-yellow-400 transition">PROGRAMS</a></li>
+    <li><a href="#" class="nav-link hover:text-yellow-400 transition">FACULTY</a></li>
+    <li><a href="#" class="nav-link hover:text-yellow-400 transition">ADMISSIONS</a></li>
+   
+  </ul>
+ 
+      <button aria-label="Search" class=" hover:text-yellow-400 transition pl-3" style="line-height: 0;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" 
+        stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true"><circle cx="11" cy="11" r="7"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+  </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative h-screen max-h-[800px] mt-16">
+    <!-- Background image -->
+    <img 
+      src="Images/CsshBuild.jpg" 
+      alt="College building with yellow pillars and large windows under a clear blue sky, surrounded by green plants and a yellow flag waving near the entrance" 
+      class="absolute inset-0 w-full h-full object-cover brightness-[0.5]" 
+      onerror="this.style.opacity='0';" 
+      loading="eager"
+      
+    />
+
+    <!-- Gradient Overlay for darkening background on left side -->
+    <div class="hero-overlay"></div>
+
+    <!-- Text and Call to Action -->
+    <div class="relative z-10 flex flex-col justify-center h-full max-w-6xl mx-auto px-6 md:px-12 space-y-6">
+      <h1 class="text-white font-extrabold welcome-text max-w-xl">
+        Welcome, <br/>
+        <span class="text-yellow-400 welcome-highlight">Tigers!</span>
+      </h1>
+
+      <button class="btn-explore max-w-max" aria-label="Explore College Programs">EXPLORE</button>
+
+      <!-- Bottom Links container -->
+      <div class="mt-auto grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl pb-[8vh]">
+        <a href="Programs.html" class="group flex flex-col space-y-1 max-w-xs mx-auto md:mx-0 text-white">
+          <p class="text-xs font-light">Comprehensive bachelor’s degrees in the humanities and social sciences</p>
+          <h3 class="font-bold uppercase group-hover:text-yellow-400 underline-white cursor-pointer tracking-wider">
+            Undergraduate Programs &rarr;
+          </h3>
+          <div class="border-b-2 border-white-400 w-24 mt-1"></div>
+        </a>
+        <a href="#" class="group flex flex-col space-y-1 max-w-xs mx-auto md:mx-0 text-white">
+          <p class="text-xs font-light">Comprehensive bachelor’s degrees in the humanities and social sciences</p>
+          <h3 class="font-bold uppercase group-hover:text-yellow-400 underline-white cursor-pointer tracking-wider">
+            Graduate Studies &rarr;
+          </h3>
+          <div class="border-b-2 border-white w-24 mt-1"></div>
+        </a>
+        <a href="#" class="group flex flex-col space-y-1 max-w-xs mx-auto md:mx-0 text-white">
+          <p class="text-xs font-light">Comprehensive bachelor’s degrees in the humanities and social sciences</p>
+          <h3 class="font-bold uppercase group-hover:text-yellow-400 underline-white cursor-pointer tracking-wider">
+            Research Centers &rarr;
+          </h3>
+          <div class="border-b-2 border-white w-24 mt-1"></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+<!-- Add this style block before </html> to blur the background image -->
+<style>
+  .blur-bg {
+    filter: blur(6px);
+  }
+</style>
+<script>
+  // Add blur class to the hero background image
+  document.addEventListener("DOMContentLoaded", function() {
+    var bgImg = document.querySelector('section img');
+    if(bgImg) bgImg.classList.add('blur-bg');
+  });
+</script>
+<div class="mt-12"></div>
+          <h4 class="text-2xl font-bold gold-accent mb-6 text-center">Academic Calendar 2024-2025</h4>
+         <div class="overflow-x-auto">
+        <div class="max-w-6xl mx-auto"> 
+    <table class="min-w-full bg-black rounded-lg shadow-lg border border-yellow-400 text-sm"> <!-- Add text-sm for smaller font -->
+      <thead>
+        <tr>
+          <th class="py-2 px-2 gold-bg text-black font-bold text-left">Term</th> <!-- Reduce py/px -->
+          <th class="py-2 px-2 gold-bg text-black font-bold text-left">Start Date</th>
+          <th class="py-2 px-2 gold-bg text-black font-bold text-left">End Date</th>
+          <th class="py-2 px-2 gold-bg text-black font-bold text-left">Key Events</th>
+        </tr>
+      </thead>
+      <tbody>
+                <tr class="border-b border-gray-800">
+                  <td class="py-3 px-4 text-yellow-400 font-semibold">First Semester</td>
+                  <td class="py-3 px-4 text-white">August 12, 2024</td>
+                  <td class="py-3 px-4 text-white">December 13, 2024</td>
+                  <td class="py-3 px-4 text-gray-300">
+                    <ul class="list-disc ml-5">
+                      <li>Orientation: Aug 9</li>
+                      <li>Midterms: Oct 7-11</li>
+                      <li>Final Exams: Dec 9-13</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-800">
+                  <td class="py-3 px-4 text-yellow-400 font-semibold">Second Semester</td>
+                  <td class="py-3 px-4 text-white">January 6, 2025</td>
+                  <td class="py-3 px-4 text-white">May 9, 2025</td>
+                  <td class="py-3 px-4 text-gray-300">
+                    <ul class="list-disc ml-5">
+                      <li>Enrollment: Jan 2-3</li>
+                      <li>Midterms: Mar 3-7</li>
+                      <li>Final Exams: May 5-9</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 text-yellow-400 font-semibold">Summer Term</td>
+                  <td class="py-3 px-4 text-white">June 2, 2025</td>
+                  <td class="py-3 px-4 text-white">July 18, 2025</td>
+                  <td class="py-3 px-4 text-gray-300">
+                    <ul class="list-disc ml-5">
+                      <li>Enrollment: May 29-30</li>
+                      <li>Final Exams: July 14-18</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+          <p class="text-gray-400 text-sm mt-4 text-center">For detailed event dates and holidays, visit the <a href="#" class="gold-accent underline hover:text-yellow-500">full calendar page</a>.</p>
+        </div>
+<!-- Campus Map -->
+<section class="py-16 bg-black text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-8 font-sans text-yellow-400">Campus Directions</h2>
+    <div class="flex flex-col md:flex-row gap-8">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-bold mb-4 text-yellow-300 font-sans">Location Information</h3>
+        <p class="mb-4 text-gray-200 font-light font-sans">
+          1st Street<br>
+          Mindanao State University <br>
+          Marawi City, Lanao Del Sur
+        </p>
+        <div class="flex flex-col space-y-4">
+          <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition font-bold font-sans">
+            Get Directions via Google Maps →
+          </a>
+          <a href="#" class="border border-yellow-400 text-yellow-400 px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition font-bold font-sans">
+            Download Campus Map (PDF)
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <!-- Google Maps Embed -->
+        <div class="h-96 w-full bg-gray-900 rounded-lg overflow-hidden border-2 border-yellow-400">
+          <iframe width="100%" height="100%" src="https://maps.google.com/maps?q=university&output=embed" 
+            frameborder="0" allowfullscreen class="rounded-lg"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="py-16 bg-black-50">
+        <style>
+          section {
+            border-top: 4px solid #443201;
+            border-radius: 0.5rem 0.5rem 0 0;
+          }
+          .gold-accent {
+            color: #FFC72C;
+          }
+          .gold-bg {
+            background-color: #FFC72C;
+          }
+        </style>
+        <div class="container mx-auto px-6"></div>
+          <h2 class="text-3xl font-bold text-center mb-12 gold-accent">Announcement Board</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-900 q shadow-md rounded-lg overflow-hidden">
+              <div class="p-6">
+                <span class="text-xs gold-accent font-bold">EVENT</span>
+                <h3 class="text-xl font-bold my-2">Guest Lecture: Social Change</h3>
+                <p class="text-gray-600 mb-4">Join us on June 15 for a talk by Dr. Rivera on the impact of social movements.</p>
+                <span class="text-sm text-yellow-600 font-semibold">Posted: June 1, 2024</span>
+              </div>
+            </div>
+            <div class="bg-gray-900 shadow-md rounded-lg overflow-hidden">
+              <div class="p-6">
+                <span class="text-xs gold-accent font-bold">DEADLINE</span>
+                <h3 class="text-xl font-bold my-2">Scholarship Applications</h3>
+                <p class="text-gray-600 mb-4">Apply for CSSH scholarships by July 1. Visit the admissions page for details.</p>
+                <span class="text-sm text-yellow-600 font-semibold">Posted: May 28, 2024</span>
+              </div>
+            </div>
+            <div class="bg-gray-900 shadow-md rounded-lg overflow-hidden">
+              <div class="p-6">
+                <span class="text-xs gold-accent font-bold">NEWS</span>
+                <h3 class="text-xl font-bold my-2">Faculty Achievement</h3>
+                <p class="text-gray-600 mb-4">Congratulations to Prof. Lee for receiving the National Humanities Award.</p>
+                <span class="text-sm text-yellow-600 font-semibold">Posted: May 20, 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+    <section class="py-16 bg-black text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-6">Join Our Academic Community</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Discover how the College of Social Sciences and Humanities can help you achieve your academic and professional goals</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="gold-bg text-black font-bold py-3 px-8 rounded-full hover:bg-yellow-600 transition inline-block">Request Information</a>
+                <a href="#" class="border-2 border-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-black transition inline-block">Visit Campus</a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="mr-2">College of Social Sciences and Humanities</span>
+                    </h3>
+                    <p class="text-gray-400">Advancing knowledge for a better society through interdisciplinary scholarship and education.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 gold-accent">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-500">Academic Calendar</a></li>
+                        <li><a href="#" class="hover:text-yellow-500">Directory</a></li>
+                        <li><a href="#" class="hover:text-yellow-500">News</a></li>
+                        <li><a href="#" class="hover:text-yellow-500">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 gold-accent">Contact</h4>
+                    <address class="not-italic text-gray-400">
+                        1st Street,<br>
+                        Marawi City, Philippines,9700<br>
+                        Phone: 0926 003 1762<br>
+                        Email: studentcouncilcssh@gmail.com
+                    </address>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 gold-accent">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://web.facebook.com/msu.cssh" class="hover:text-yellow-500">Facebook</a>
+                        <a href="#" class="hover:text-yellow-500">Instagram</a>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>© 2025 College of Social Sciences and Humanities. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--Eto yung DOM para sa clickable-->
+<script>
+ 
+  document.addEventListener("DOMContentLoaded", function() {
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+    burger.addEventListener('click', function() {
+      navMenu.classList.toggle('hidden');
+      navMenu.classList.toggle('flex');
+    });
+  });
+</script>
+</html>
+
+
